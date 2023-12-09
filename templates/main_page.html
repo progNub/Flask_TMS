@@ -15,7 +15,7 @@
 		<h4 class="text-danger">{% if error %} {{ error }} {% endif %}</h4>
 	</div>
 
-	<form action="http://127.0.0.1:5000/" method="post">
+	<form action="/" method="post">
 		<div class='col-5 mx-auto p-5 border rounded content'>
 			<h2>Поле добавление записи</h2>
 			<div class="mb-3">
@@ -33,7 +33,7 @@
 			</div>
 		{% for note in notes %}
 		<div>
-			<a href="http://127.0.0.1:5000/{{ note.uuid }}">{{ loop.index }}. {{ note.title }}</a>
+			<a href="/{{ note.uuid }}">{{ loop.index }}. {{ note.title }}</a>
 		</div>
 		{% endfor %}
 		</div>

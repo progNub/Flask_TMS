@@ -28,7 +28,7 @@ class Note(Base):
     uuid = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
     title = Column(String(100), unique=True, nullable=False)
     content = Column(Text, nullable=False)
-    created_at = Column(DateTime, nullable=False, default=datetime.now())
+    created_at = Column(DateTime, nullable=False, default=datetime.now)
 
     def __str__(self):
         return self.title
